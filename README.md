@@ -31,9 +31,9 @@ Starter code should be fun and practical.
 ### Week 0
 
 #### Progress
-| **Task** | **Evidence** |
-| ------------- | ------------- |
-| Nathan:  | [Ticket]()  |
-| Noah:  | [Ticket]()  |
-| Isaac:  | [Ticket]()  |
-| Paul:  | [Ticket]()  | 
+| **Task** |**Roles Established**| **Evidence** |
+| ------------- |---------------| ------------- |
+| Nathan:  |Scrum Master| [Ticket]()  |
+| Noah:  |Git Hub Admin| [Ticket]()  |
+| Isaac:  |Technical Officer| [Ticket]()  |
+| Paul:  |Deplopyment Manager| [Ticket]()  | 
