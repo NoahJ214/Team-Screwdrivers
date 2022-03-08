@@ -25,11 +25,7 @@ Starter code should be fun and practical.
 #### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
   
   
-  ## TIME TABLE
-
-### Week 11
-
-#### Progress
+## TIME TABLE
 
 ### Week _
 
