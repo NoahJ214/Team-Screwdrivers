@@ -24,7 +24,8 @@ Starter code should be fun and practical.
 #### Recall on ".gitignore" solution to the pains of temporary files.  Start a ".gitignore" and avoid promoting temporary files to Git, for instance IDE xml files.
 #### A project needs to establish a "requirements.txt" to keep track of Python packages used by the project.  This help in other IDEs and Deployment.  IntelliJ has menu Tool -> Sync Python Requirements to start file. 
   
-  
+# Description
+  Trail Norte is a club at that Del Norte that is involved in community serive, mostly for creating trails and cleaning the environment. Trail Norte Services allows members to view upcoming events and manages their hours for community service. Calendars and schedules will be added along with tables of information and other activities on the website.
 ## TIME TABLE
 
 ### Week _
