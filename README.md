@@ -2,6 +2,8 @@
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Idea
 Starter code should be fun and practical.
+
+[Wireframe](https://docs.google.com/drawings/d/14RODdnrxrKMCJk68_OpMs7CLDXJ4XPMM6XRYiQNPPqI/edit?usp=sharing)
 ### Visual thoughts
 #### Organize with Bootstrap menu 
 #### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
