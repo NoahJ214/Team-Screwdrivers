@@ -1,4 +1,4 @@
-## [Team Screwdrivers]
+## Team Screwdrivers
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 [Wireframe](https://docs.google.com/drawings/d/14RODdnrxrKMCJk68_OpMs7CLDXJ4XPMM6XRYiQNPPqI/edit?usp=sharing)
