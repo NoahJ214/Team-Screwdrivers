@@ -1,3 +1,5 @@
+{% include navbar2.html %}
+
 ## Team Screwdrivers
 
 [Github Pages](https://noahj214.github.io/Team-Screwdrivers/)

@@ -11,12 +11,24 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('kangaroos') }}>Calendars</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Events</a>
+{#            Calendar with events(manager can add events)#}
+            <a class="nav-link" href={{ url_for('walruses') }}>Roster</a>
+{#            list of members and their classification(manager can kick or promote)#}
+            <a class="nav-link" href={{ url_for('walruses') }}>Hours</a>
+{#            manage hours mostly for USER#}
+            <a class="nav-link" href={{ url_for('walruses') }}>Material WL</a>
+            {#            manage hours mostly for USER#}
+            <a class="nav-link" href={{ url_for('walruses') }}>Contact Info</a>
+{#            manage hours mostly for USER#}
+
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="/stub"></a>
         </div>
         <div class="navbar-nav">
             <a class="nav-link" href={{ url_for('walruses') }}>Login</a>
+{#            signing in(allows privileges#}
+            <a class="nav-link" href={{ url_for('walruses') }}>Sign Up</a>
+{#            Using crud#}
         </div>
     </div>
 </nav>
