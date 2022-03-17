@@ -8,9 +8,11 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 # Sponsor: Justin Dorman
 ## Contact Info: 
--Phone Number: 858-757-1166
--Email: justindorman2@gmail.com
--Discord: MacMellon #2665
+Phone Number: 858-757-1166
+
+Email: justindorman2@gmail.com
+
+Discord: MacMellon #2665
 
 
 # Description
