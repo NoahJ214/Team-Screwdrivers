@@ -6,8 +6,8 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 [Roster Page Wireframe](https://docs.google.com/drawings/d/16yUoxlKJP2jDEnlldiArediSeA06jlFYST_C2Zj8K0o/edit?usp=sharing)
 
 
-## Sponsor: Justin Dorman
-# Contact Info: 
+# Sponsor: Justin Dorman
+## Contact Info: 
 Phone Number: 858-757-1166
 Email: justindorman2@gmail.com
 Discord: MacMellon #2665
