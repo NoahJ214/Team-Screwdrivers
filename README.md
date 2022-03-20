@@ -1,15 +1,18 @@
 {% include navbar2.html %}
 
 ## Team Screwdrivers
+# Trail Norte
+Make a difference in you environment
 
-[Github Pages](https://noahj214.github.io/Team-Screwdrivers/)
+- [Github Pages](https://noahj214.github.io/Team-Screwdrivers/)
 
-[Runtime link](https://portfolio.nighthawkcodingsociety.com)
+- [Runtime link](https://portfolio.nighthawkcodingsociety.com)
 
-[Wireframe](https://docs.google.com/drawings/d/14RODdnrxrKMCJk68_OpMs7CLDXJ4XPMM6XRYiQNPPqI/edit?usp=sharing)
+- [Wireframe](https://docs.google.com/drawings/d/14RODdnrxrKMCJk68_OpMs7CLDXJ4XPMM6XRYiQNPPqI/edit?usp=sharing)
 
-[Roster Page Wireframe](https://docs.google.com/drawings/d/16yUoxlKJP2jDEnlldiArediSeA06jlFYST_C2Zj8K0o/edit?usp=sharing)
+- [Roster Page Wireframe](https://docs.google.com/drawings/d/16yUoxlKJP2jDEnlldiArediSeA06jlFYST_C2Zj8K0o/edit?usp=sharing)
 
+- [Scrum Board](https://github.com/NoahJ214/Team-Screwdrivers/projects/1)
 
 # Sponsor: Justin Dorman
 ## Contact Info: 
