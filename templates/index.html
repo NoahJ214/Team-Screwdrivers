@@ -1,7 +1,139 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/base.html" %}
+<!DOCTYPE HTML>
+<html lang="en">
 
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root{
+            --white: black;
+            --black: white;
+            --grey: black;
+        }
+
+        html, body{
+            margin: 0;
+            background-image: url("https://cdn.wallpapersafari.com/8/94/85rz1q.jpg");
+            background-size: 100%;
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        .front{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+        .bruh {
+            font-size: 100px;
+            font-family: "Times New Roman", Times, serif;
+            padding-left: 130px;
+        }
+
+        .button1 {
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            border: 2px solid white;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+        }
+        .button2 {
+            background-color: white;
+            background-image: linear-gradient(1deg, white 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            box-shadow: none;
+            box-sizing: border-box;
+            border: 2px solid #149BF3;
+            color: #149BF3;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+        }
+
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+        }
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+
+    </style>
+
+    <title>{{ project }} </title>
+
+</head>
+{% include "layouts/navbar.html" %}
+
+<body>
+{% block body %}
+    <div class="container-fluid">
+        <div class="row justify-content-end" style="padding: 2%;">
+            <div class="col-2" style="text-align: right;">
+                {% block info %}
+                    <!-- notice jinja style variables used in href's -->
+                    <a><h5>{{basename}}</h5></a>
+                    <a href={{twitter}} target="_blank"><i class="fa "></i></a>
+                    <a href={{twitter}} target="_blank"><i class="fa "></i></a>
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <table class="front" style="color: white">
+        <tr>
+            <td class="bruh">Trailnorte Services</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 450px"><a class="button1" href={{ url_for('login') }}>Log In</a><a style="padding-left: 30px"></a><a class="button2" style="color: #149BF3" href={{ url_for('login') }}>Sign Up</a></td>
+        </tr>
+    </table>
+
+
+{% endblock %}
+
+</body>
+
+</html>
 <!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+{% set project = "Trailnorte" %}
+
