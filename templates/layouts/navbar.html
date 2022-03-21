@@ -1,27 +1,38 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg colr" >
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div   class="navbar-nav" >
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('index') }}>Calendars</a>
+            <a class="nav-link colr2" href={{ url_for('index') }}>Home</a>
+            <a style="padding-left: 30px"></a>
+            <a class="nav-link colr2" href={{ url_for('index') }}>Calendars</a>
 {#            Calendar with events(manager can add events)#}
-            <a class="nav-link" href={{ url_for('index') }}>Roster</a>
+            <a style="padding-left: 30px"></a>
+            <a class="nav-link colr2" href={{ url_for('index') }}>Roster</a>
 {#            list of members and their classification(manager can kick or promote)#}
-            <a class="nav-link" href={{ url_for('index') }}>Hours</a>
+            <a style="padding-left: 30px"></a>
+            <a class="nav-link colr2" href={{ url_for('index') }}>Hours</a>
 {#            manage hours mostly for USER#}
-            <a class="nav-link" href={{ url_for('index') }}>Material WL</a>
+            <a style="padding-left: 30px"></a>
+            <a class="nav-link colr2" href={{ url_for('index') }}>Material WL</a>
             {#            manage hours mostly for USER#}
-            <a class="nav-link" href={{ url_for('index') }}>Contact Info</a>
+            <a style="padding-left: 30px"></a>
+            <a class="nav-link colr2" href={{ url_for('index') }}>Contact Info</a>
 {#            manage hours mostly for USER#}
 
             <!-- stub is shown using the name of the route -->
         </div>
     </div>
 </nav>
+<style>
+    .colr {
+        background-color: saddlebrown;
+    }
+    .colr2 {
+        color: white;
+        font-size: x-large;
+        font-family: "Times New Roman", Times, serif;
+    }
+</style>
