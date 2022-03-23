@@ -26,6 +26,12 @@ Discord: MacMellon #2665
 # Description
   Our project built for TrailNorte will be called Trail Norte Services and will allow members to view upcoming events and manage their volunteer hours for their community service. Calendars and schedules will be added along with tables of information and other activities on the website to alert members of volunteer opportunities. Our website will allow the user to search for trails within a certain radius, as well as have a club member roster. An idea that can be implemented is a contact form that connects the website directly to the TrailNorte leaders' emails. We might also add a suggestion box where users on the website and within the club can type in suggestions for future plans or ideas to improve the club. These suggestions will be visible to TrailNorte leadership in some sort of email form or google form. We will also have a photo gallery of previous volunteer events and that may even include user submitted images.
   
+  
+# PII(Personal Identifiable Information) Concerns
+- Worried about password and username leaks (login and personal account info)
+- Concerns about contact information becoming public like phone number or email
+- May implement two factor authentication but that might be overboard
+
 ## TIME TABLE
 
 ### Week 0
