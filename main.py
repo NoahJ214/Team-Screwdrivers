@@ -25,6 +25,10 @@ def stub():
 def calen():
     return render_template("calen.html")
 
+@app.route('/mater/')
+def mater():
+    return render_template("mater.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
