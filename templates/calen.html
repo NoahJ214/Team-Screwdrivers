@@ -10,17 +10,35 @@
     <!-- the form awesome library is used to add icons to our form -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <!-- include the stylesheet file -->
+    <script src="/static/calendar.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/styles/calendar.css">
 
 </head>
 <body>
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div>
-        <h1>Hey</h1>
+    <div id="cal-wrap">
+        <!-- (A) PERIOD SELECTOR -->
+        <div id="cal-date">
+            <select id="cal-mth"></select>
+            <select id="cal-yr"></select>
+        </div>
 
+        <!-- (B) CALENDAR -->
+        <div id="cal-container"></div>
+
+        <!-- (C) EVENT FORM -->
+        <form id="cal-event" >
+            <h1 id="evt-head"></h1>
+            <div id="evt-date"></div>
+            <textarea id="evt-details" required></textarea>
+            <input id="evt-close" type="button" value="Close"/>
+            <input id="evt-del" type="button" value="Delete"/>
+            <input id="evt-save" type="submit" value="Save"/>
+        </form>
     </div>
-
+    </body>
 {% endblock %}
 
 <!-- Add Firebase products that you want to use -->
