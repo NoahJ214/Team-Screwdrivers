@@ -30,6 +30,10 @@ def calen():
 def mater():
     return render_template("mater.html")
 
+@app.route('/map/')
+def map():
+    return render_template("map.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
