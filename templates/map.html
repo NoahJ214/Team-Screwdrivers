@@ -3,12 +3,108 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            :root{
+                --white: black;
+                --black: white;
+                --grey: black;
+            }
+
+            html, body{
+                margin: 0;
+                background-image: url("https://cdn.wallpapersafari.com/8/94/85rz1q.jpg");
+                background-size: 100%;
+            }
+
+            h1{
+                font-size: 5em;
+            }
+
+            .front{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+            .bruh {
+                font-size: 100px;
+                font-family: "Times New Roman", Times, serif;
+                padding-left: 130px;
+            }
+
+            .button1 {
+                background-color: #3EB2FD;
+                background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+                background-size: calc(100% + 20px) calc(100% + 20px);
+                border-radius: 100px;
+                box-shadow: none;
+                box-sizing: border-box;
+                color: #FFFFFF;
+                border: 2px solid white;
+                cursor: pointer;
+                display: inline-flex;
+                font-family: CircularStd,sans-serif;
+                font-size: 1rem;
+                height: auto;
+                justify-content: center;
+                line-height: 1.5;
+                padding: 6px 20px;
+                text-decoration: none;
+                transition: background-color .2s,background-position .2s;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: nowrap;
+            }
+            .button2 {
+                background-color: white;
+                background-image: linear-gradient(1deg, white, white 99%);
+                background-size: calc(100% + 20px) calc(100% + 20px);
+                border-radius: 100px;
+                box-shadow: none;
+                box-sizing: border-box;
+                border: 2px solid #149BF3;
+                color: #149BF3;
+                cursor: pointer;
+                display: inline-flex;
+                font-family: CircularStd,sans-serif;
+                font-size: 1rem;
+                height: auto;
+                justify-content: center;
+                line-height: 1.5;
+                padding: 6px 20px;
+                text-decoration: none;
+                transition: background-color .2s,background-position .2s;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: nowrap;
+            }
+
+
+            .fa{
+                font-size: 3em;
+                letter-spacing: 1em;
+                transition: all .2s;
+                color: white;
+            }
+            .fa:hover{
+                transform: translateY(10px);
+            }
+
+
+        </style>
+
+        <title>{{ project }} </title>
+
     </head>
     <body>
     {% include "layouts/navbar.html" %}
-        <h1>Location of the next event</h1>
+        <h1 style="color:white;">Nearby Trail Locations</h1>
+        <h2 style="color:white;">Next Event Location: TBD</h2>
         <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.7567578124076!2d-117.1690857848583!3d32.93102428092574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf862cb69471d%3A0x8bb589069f2c9627!2sLos%20Penasquitos%20Canyon%20Trail%2C%20San%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1650850926793!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1k2-mxgmWjCGNJfg3c2vAZ7vpXdRDagQ8&ehbc=2E312F" width=1000" height="520"></iframe>
         </p>
     </body>
 </html>
