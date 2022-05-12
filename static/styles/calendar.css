@@ -16,7 +16,7 @@
 
 /* (D) CALENDAR */
 #calendar {
-    width: 100%;
+    width: 225%;
     border-collapse: collapse;
 }
 #calendar tr.head td {
