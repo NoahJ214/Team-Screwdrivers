@@ -1,215 +1,216 @@
-<!DOCTYPE HTML>
-<html lang="en">
-
-
+<!DOCTYPE html>
+<html>
 <head>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Calendar</title>
-    <!-- the form awesome library is used to add icons to our form -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <!-- include the stylesheet file -->
-
+    <title>Web SQL Database with HTML and Javascript</title>
+    <meta name="viewport" content="user-scalable=no,width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    ​
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
-<body>
-{% include "layouts/navbar.html" %}
+<body style="margin:30px">
+<!--
+	How to View Web SQL data:
+0. Run the source code above on your browser
+1. Press Ctrl + Shift + I
+2. Click on "Application" tab
+3. Double click on "Web SQL" then click on itemDB (name of our database)
+-->
+​
+<div class="container">
 
-{% block body %}
-    <div id="myDIV" class="header">
-        <h2>TrailNorte Material Wishlist</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
+    <div class="row">
+        <form>
+            <fieldset>
+                <legend>Item Name</legend>
+                <input type="text" class="form-control" name="" id="item">
+                ​
+                <legend>Quantity</legend>
+                <input type="number" class="form-control" id="quantity" name="">
+                <br>
+                <button type="button" id="insert" class="btn btn-success">Add to Table</button>
+                ​
+                <button type="button" id="create" class="btn btn-success">Create Table</button>
+                ​
+                <button type="button" id="remove" class="btn btn-danger">Delete Table</button>
+                ​
+                <p><small><b>Note:</b> Table must be created first before inserting or performing any transaction</small></p>
+            </fieldset>
+        </form>
+        ​
+        <hr>
+        <h4>Record</h4>
+        <table class="table table-bordered table-hover" id="itemlist">
+
+        </table>
+        ​
+        ​
+        ​
+        ​
     </div>
-
-    <ul id="myUL">
-        <li>2 Shovels</li>
-        <li class="checked">Gloves for Everyone</li>
-        <li>Loppers (Maybe 2 or 3)</li>
-        <li>Black Trash Bags</li>
-        <li>Wood Saws (2)</li>
-        <li>TrailNorte Shirts</li>
-    </ul>
-
-{% endblock %}
-
-<!-- Add Firebase products that you want to use -->
-
-</body>
-
-<style>
-    /* Include the padding and border in an element's total width and height */
-    * {
-        box-sizing: border-box;
-    }
-
-    /* Remove margins and padding from the list */
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Style the list items */
-    ul li {
-        cursor: pointer;
-        position: relative;
-        padding: 12px 8px 12px 40px;
-        background: #eee;
-        font-size: 18px;
-        transition: 0.2s;
-
-        /* make the list items unselectable */
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    /* Set all odd list items to a different color (zebra-stripes) */
-    ul li:nth-child(odd) {
-        background: #f9f9f9;
-    }
-
-    /* Darker background-color on hover */
-    ul li:hover {
-        background: #ddd;
-    }
-
-    /* When clicked on, add a background color and strike out text */
-    ul li.checked {
-        background: #888;
-        color: #fff;
-        text-decoration: line-through;
-    }
-
-    /* Add a "checked" mark when clicked on */
-    ul li.checked::before {
-        content: '';
-        position: absolute;
-        border-color: #fff;
-        border-style: solid;
-        border-width: 0 2px 2px 0;
-        top: 10px;
-        left: 16px;
-        transform: rotate(45deg);
-        height: 15px;
-        width: 7px;
-    }
-
-    /* Style the close button */
-    .close {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 12px 16px 12px 16px;
-    }
-
-    .close:hover {
-        background-color: #f44336;
-        color: white;
-    }
-
-    /* Style the header */
-    .header {
-        background-color: #f44336;
-        padding: 30px 40px;
-        color: white;
-        text-align: center;
-    }
-
-    /* Clear floats after the header */
-    .header:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    /* Style the input */
-    input {
-        margin: 0;
-        border: none;
-        border-radius: 0;
-        width: 75%;
-        padding: 10px;
-        float: left;
-        font-size: 16px;
-    }
-
-    /* Style the "Add" button */
-    .addBtn {
-        padding: 10px;
-        width: 25%;
-        background: #d9d9d9;
-        color: #555;
-        float: left;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s;
-        border-radius: 0;
-    }
-
-    .addBtn:hover {
-        background-color: #bbb;
-    }
-</style>
-
-<script>
-    // Create a "close" button and append it to each list item
-    var myNodelist = document.getElementsByTagName("LI");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        myNodelist[i].appendChild(span);
-    }
-
-    // Click on a close button to hide the current list item
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
+    ​
+</div>
+<script type="text/javascript">
+    ​
+var db=openDatabase("itemDB","1.0","itemDB",65535); // itemDB is the database name
+    ​
+    ​
+$(function(){
+​
+loadData(); //loading our records
+​
+​
+​
+//CREATING TABLE STARTS HERE
+​
+$("#create").click(function(){
+    db.transaction(function(transaction){
+        var sql="CREATE TABLE items "+
+            "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
+            "item VARCHAR(100) NOT NULL,"+
+            "quantity INT(5) NOT NULL)";
+        transaction.executeSql(sql,undefined,function(){
+            alert("Table is created successfully");
+        },function(){
+            alert("Table is already being created");
+        })
+    });
+});
+// CREATING TABLE ENDS HERE
+​
+​
+​
+//DELETING TABLE STARTS HERE
+    $("#remove").click(function(){
+    ​
+if(!confirm("Are you sure to delete this table?","")) return;;
+        db.transaction(function(transaction){
+            var sql="DROP TABLE items";
+            transaction.executeSql(sql,undefined,function(){
+                alert("Table is deleted successfully")
+            },function(transaction,err){
+                alert(err.message);
+            })
+        });
+    });
+//DELETING TABLE ENDS HERE
+​
+​
+​
+//INSERTING DATA INTO TABLE
+​
+$("#insert").click(function(){
+    var item=$("#item").val();
+    var qty=$("#quantity").val();
+    db.transaction(function(transaction){
+        var sql="INSERT INTO items(item,quantity) VALUES(?,?)";
+        transaction.executeSql(sql,[item,qty],function(){
+            alert("New item is added successfully");
+        },function(transaction,err){
+            alert(err.message);
+    loadData();
+        })
+    })
+})
+//INSERTING DATA ENDS HERE
+​
+​
+//FETCHING OUR RECORD
+​
+​
+​
+//FUNCTION TO LOAD OUR RECORDS
+    function loadData(){
+        $("#itemlist").children().remove();
+        db.transaction(function(transaction){
+            var sql="SELECT * FROM items ORDER BY id DESC";
+            transaction.executeSql(sql,undefined,function(transaction,result){
+                if(result.rows.length){
+                ​
+for(var i=0;i<result.rows.length;i++){
+    var row=result.rows.item(i);
+    var item=row.item;
+    var id=row.id;
+    var quantity=row.quantity;
+    $("#itemlist").append('<tr id="del'+id+'"><td>'+id+'</td><td>'+item+'</td><td id="newqty'+id+'">'+quantity+'</td><td><a href="#" class="btn btn-danger deleteitem" data-id="'+id+'">Delete</a> <a href="#" class="btn btn-primary updateitem" data-id="'+id+'">Update</a></td></tr>');
+}
+                }else{
+                    $("#itemlist").append('<tr><td colspan="3" align="center">No Item Found</td></tr>');
+                }
+            },function(transaction,err){
+                alert('No table found. Click on "Create Table" to create table now');
+            })
+        })
+​
+    ​
+    ​
+    ​
+//setTimeout was used to execute codes inside it to be loaded after records are loaded/fetched.
+    ​
+setTimeout(function(){
+    $(".deleteitem").click(function(){
+        var sure=confirm("Are you sure to delete this item?");
+        if(sure===true){
+            var id=$(this).data("id");
+            db.transaction(function(transaction){
+                var sql="DELETE FROM items where id=?";
+                transaction.executeSql(sql,[id],function(){
+                    $("#del"+id).fadeOut();
+                    alert("Item is deleted successfully");
+                },function(transaction,err){
+                    alert(err.message);
+                })
+            });
         }
+    })
+​
+$(".updateitem").click(function(){
+    var qty=prompt("Kindly enter new quantity",1);
+    if(qty!==null){
+        var id=$(this).data("id");
+        db.transaction(function(transaction){
+            var sql="UPDATE items SET quantity=? where id=?";
+            transaction.executeSql(sql,[qty,id],function(){
+                $("#newqty"+id).html(qty);
+                alert("Item is updated successfully");
+            },function(transaction,err){
+                alert(err.message);
+            })
+        });
     }
-
-    // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');
-        }
-    }, false);
-
-    // Create a new list item when clicking on the "Add" button
-    function newElement() {
-        var li = document.createElement("li");
-        var inputValue = document.getElementById("myInput").value;
-        var t = document.createTextNode(inputValue);
-        li.appendChild(t);
-        if (inputValue === '') {
-            alert("You must write something!");
-        } else {
-            document.getElementById("myUL").appendChild(li);
-        }
-        document.getElementById("myInput").value = "";
-
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        li.appendChild(span);
-
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
-                var div = this.parentElement;
-                div.style.display = "none";
-            }
-        }
+})
+​
+},1000);
+​
+    ​
     }
+//END OF loadData() function
+​
+​
+​
+​
+});
+​
+    ​
+    ​
+    ​
+    ​
+    ​
+    ​
+    ​
+    ​
+    ​
 </script>
-
+​
+​
+​
+​
+<!--
+	NEED CUSTOMIZATION ?
+Reach me:
+Facebook: https://fb.com/saheed54
+Twitter: @Saheedyekeen2
+WhatsApp: +2348161610410
+Email: ysbabatunde@gmail.com, webbuilder07@gmail.com
+-->
+</body>
 </html>
