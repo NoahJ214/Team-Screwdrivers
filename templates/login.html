@@ -5,45 +5,41 @@
 <head>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
     <title>Login</title>
-    <!-- the form awesome library is used to add icons to our form -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <!-- include the stylesheet file -->
-    <link href="/static/styles/stylelog.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div class="login">
-        <h1>Login</h1>
-        <form action="/templates/index.html" method="post">
-            <label for="username">
-                <!-- font awesome icon -->
-                <i class="fas fa-user"></i>
-            </label>
-            <input type="text" name="username" placeholder="Username" id="username" required>
-            <label for="password">
-                <i class="fas fa-lock"></i>
-            </label>
-            <input type="password" name="password" placeholder="Password" id="password" required>
-            <input onclick="go()" type="submit" value="Login">
-        </form>
+
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+            <span class="fs-4">SQL CRUD Login Page</span>
+        </header>
     </div>
 
+    <div class="container py-4 text-light bg-success">
+
+        <div class="container bg-secondary py-4">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                <form method="POST" ID="login" action={{url_for('main_login')}}>
+                    <table>
+                        <tr><th><label for="email">Email</label></th></tr>
+                        <tr><td><input type="email" id='email' name="email" size="20" required></td></tr>
+                        <tr><th><label for="password">Password</label></th></tr>
+                        <tr><td><input type="password" id="password" name="password" size="20" required></td></tr>
+                        <tr><th><input type="submit" value="Submit"></th></tr>
+                        <tr><td><a href={{url_for('main_authorize')}}>Sign Up</a></td></tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+    </body>
 {% endblock %}
 
 <!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
-<script>
-    function go() {
-    }
-</script>
+
 </body>
 
 </html>
