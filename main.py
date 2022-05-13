@@ -39,12 +39,13 @@ def main_login():
         email = request.form.get("email")
         password = request.form.get("password")
         if login(email, password):
-            if next_page is None:
-                return redirect(url_for('index'))
-            else:
+            try:
                 temp = next_page
                 next_page = None
                 return redirect(url_for(temp))
+            except:
+                return redirect(url_for('index'))
+
 
     # if not logged in, show the login page
     return render_template("login.html")

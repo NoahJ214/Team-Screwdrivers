@@ -19,7 +19,6 @@ app_crud = Blueprint('crud', __name__,
 
 # Default URL for Blueprint
 @app_crud.route('/')
-@login_required  # Flask-Login uses this decorator to restrict acess to logged in users
 def crud():
     """obtains all Users from table and loads Admin Form"""
     return render_template("crud.html", table=users_all())
@@ -76,20 +75,3 @@ def delete():
         if po is not None:
             po.delete()
     return redirect(url_for('crud.crud'))
-
-
-# Search Form
-@app_crud.route('/search/')
-def search():
-    """loads form to search Users data"""
-    return render_template("search.html")
-
-
-# Search request and response
-@app_crud.route('/search/term/', methods=["POST"])
-def search_term():
-    """ obtain term/search request """
-    req = request.get_json()
-    term = req['term']
-    response = make_response(jsonify(users_ilike(term)), 200)
-    return response
