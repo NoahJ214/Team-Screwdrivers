@@ -22,6 +22,14 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link colr2" href={{ url_for('map') }} >Locations</a>
             <a style="padding-left: 30px"></a>
             <a class="nav-link colr2" href={{ url_for('index') }}>Contact Info</a>
+            <a style="padding-left: 200px"></a>
+
+            <a class="nav-link colr2 button-70" href={{ url_for('crud.crud_logout') }}>Logout</a>
+            <a class="nav-link colr2" style="color: greenyellow">{{current_user.name}}</a>
+
+{#            <header class="pb-3 mb-4 border-bottom border-primary text-dark">#}
+{#                <span class="fs-4"><a href={{ url_for('crud.crud_logout') }}>Logout</a></span>#}
+{#            </header>#}
 
             <!-- stub is shown using the name of the route -->
         </div>
@@ -36,4 +44,23 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         font-size: x-large;
         font-family: "Times New Roman", Times, serif;
     }
+                                                        /* CSS */
+   .button-70 {
+       background-image: linear-gradient(#4af08c, #026e2d);
+       {#background-color: #904414;#}
+       border: 0;
+       border-radius: 4px;
+       box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+       box-sizing: border-box;
+       color: #fff;
+       cursor: pointer;
+       font-family: Montserrat,sans-serif;
+       font-size: .9em;
+       margin: 5px;
+       padding: 10px 15px;
+       text-align: center;
+       user-select: none;
+       -webkit-user-select: none;
+       touch-action: manipulation;
+   }
 </style>
