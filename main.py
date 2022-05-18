@@ -58,6 +58,11 @@ def main_logout():
     logout()
     return redirect(url_for('index'))
 
+@app.route('/photo/')
+def photo():
+    return render_template("photo.html")
+
+
 
 @app.route('/authorize/', methods=["GET", "POST"])
 def main_authorize():
