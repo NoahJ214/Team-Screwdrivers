@@ -31,20 +31,20 @@ def notes():
             list_notes.append(note)  # prepare note list for render_template
         if list_notes is not None:
             list_notes.reverse()
-    list_notes.pop(0)
-    list_notes.pop(0)
-    list_notes.pop(0)
+
 
 # render user and note data in reverse chronological order(display latest notes rec on top)
     return render_template('notes.html', user=user, notes=list_notes)
 
-
-# @app_notes.route('/delete/', methods=["POST"])
-# def delete():
-#     """gets userid from form delete corresponding record from Users table"""
-#     if request.form:
-#         notes.pop(1)
-#     return redirect(url_for('notes.notes'), notes=notes)
+@app_notes.route('/delete/', methods=["POST"])
+def delete():
+    """gets userid from form delete corresponding record from Users table"""
+    if request.form:
+        noteid = request.form.get("note.id")
+        po = user_by_id(noteid)
+        if po is not None:
+            po.delete()
+    return redirect(url_for('notes.notes'))
 
 
 @app_notes.route('/create/', methods=["POST"])

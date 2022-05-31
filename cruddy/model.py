@@ -19,7 +19,7 @@ class Notes(db.Model):
     # Define a relationship in Notes Schema to userID who originates the note, many-to-one (many notes to one user)
     userID = db.Column(db.Integer, db.ForeignKey('users.userID'))
 
-    # Constructor of a Notes object, initializes of instance variables within object
+# Constructor of a Notes object, initializes of instance variables within object
     def __init__(self, note, userID):
         self.note = note
         self.userID = userID
