@@ -36,15 +36,7 @@ def notes():
 # render user and note data in reverse chronological order(display latest notes rec on top)
     return render_template('notes.html', user=user, notes=list_notes)
 
-@app_notes.route('/delete/', methods=["POST"])
-def delete():
-    """gets userid from form delete corresponding record from Users table"""
-    if request.form:
-        noteid = request.form.get("note.id")
-        po = user_by_id(noteid)
-        if po is not None:
-            po.delete()
-    return redirect(url_for('notes.notes'))
+
 
 
 @app_notes.route('/create/', methods=["POST"])
@@ -58,4 +50,18 @@ def create():
         )
         # create a record in the Notes table with the Notes object
         note_object.create()
+    return redirect(url_for('notes.notes'))
+
+@app_notes.route('/create2/', methods=["POST"])
+@login_required
+def create2():
+    """gets data from form and add to Notes table"""
+    if request.form:
+        # construct a Notes object
+        note_object2 = Notes(
+            request.form.get("notes2"), current_user.userID
+        )
+        # create a record in the Notes table with the Notes object
+        note_object2.create()
+
     return redirect(url_for('notes.notes'))
