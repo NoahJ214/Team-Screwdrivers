@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Photo Gallery</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/roster.jpg"/>
+    {% include "layouts/navbar.html" %}
 </head>
 <body>
 <section aria-label="Newest Photos">
-    <div class="carousel" data-carousel>Z
+    <div class="carousel" data-carousel>
         <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
         <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
         <ul data-slides>
             <li class="slide" data-active>
-                <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
+                <img src="/static/images/trailnorte%201.PNG" alt="Nature Image #1">
             </li>
             <li class="slide">
-                <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
+                <img src="/static/images/trailnorte%202.PNG" alt="Nature Image #2">
             </li>
             <li class="slide">
-                <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
+                <img src="/static/images/trailnorte%203.PNG" alt="Nature Image #3">
+            </li>
+            <li class="slide">
+                <img src="/static/images/trailnorte%204.PNG" alt="Nature Image #3">
+            </li>
+            <li class="slide">
+                <img src="/static/images/trailnorte%205.PNG" alt="Nature Image #3">
+            </li>
+            <li class="slide">
+                <img src="/static/images/trailnorte%206.PNG" alt="Nature Image #3">
+            </li>
+            <li class="slide">
+                <img src="/static/images/trailnorte%207.PNG" alt="Nature Image #3">
+            </li>
+            <li class="slide">
+                <img src="/static/images/trailnorte%208.PNG" alt="Nature Image #3">
             </li>
         </ul>
     </div>
@@ -77,13 +96,14 @@
         opacity: 0;
         transition: 200ms opacity ease-in-out;
         transition-delay: 200ms;
+        background-color: saddlebrown;
     }
 
     .slide > img {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: scale-down;
         object-position: center;
     }
 
