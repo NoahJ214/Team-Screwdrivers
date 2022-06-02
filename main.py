@@ -154,7 +154,7 @@ def reset_with_token(token):
     #    user.password = form.password.data
 
     #    db.session.add(user)
-        db.session.commit()
+#        db.session.commit()
 
         return redirect(url_for('main_login'))
     return render_template('reset_with_token.html', form=form, token=token)
