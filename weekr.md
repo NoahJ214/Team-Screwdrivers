@@ -18,7 +18,7 @@ Team Assessment:
 
 ## Noah Review Ticket
 
-https://github.com/NoahJ214/Team-Screwdrivers/issues/26
+[Noah Jeng  N@TM Review Ticket](https://github.com/NoahJ214/Team-Screwdrivers/issues/26)
 
 ## Paul Review Ticket
 
