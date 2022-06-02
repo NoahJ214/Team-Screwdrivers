@@ -19,7 +19,12 @@ Wireframes
 
 ![Roster Wireframe](https://user-images.githubusercontent.com/89223537/171665329-b943c880-45b2-427a-bb5d-b17935bc0349.png)
 
-[Individual Github Pages](https://noahj214.github.io/NoahJengCSP/)
-
 [Advertisement Video](https://youtu.be/8edjipfTVGs)
 
+[Individual Github Pages](https://noahj214.github.io/NoahJengCSP/)
+
+## Paul Review Ticket
+
+## Nathan Review Ticket
+
+## Isaac Review Ticket
