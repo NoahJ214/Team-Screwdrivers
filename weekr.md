@@ -22,6 +22,8 @@ Team Assessment: 33/35 - Our group worked well together during the period before
 
 ## Paul Review Ticket
 
+[Paul DiPasquale  N@TM Review Ticket](https://github.com/NoahJ214/Team-Screwdrivers/issues/29)
+
 ## Nathan Review Ticket
 
 [Nathan Shih  N@TM Review Ticket](https://github.com/NoahJ214/Team-Screwdrivers/issues/28)
