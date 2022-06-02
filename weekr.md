@@ -43,5 +43,7 @@ Team Grade Assessment: 33/35 - Our group worked well together during the period 
 
 ## Isaac Review Ticket
 
+[Isaac Le N@TM Review Ticket](https://github.com/NoahJ214/Team-Screwdrivers/issues/27)
+
 
  
