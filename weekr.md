@@ -43,16 +43,5 @@ Team Grade Assessment: 33/35 - Our group worked well together during the period 
 
 ## Isaac Review Ticket
 
-[Updated Material Wishlist](https://github.com/NoahJ214/Team-Screwdrivers/commit/787cb383f7be8d79a8dac1346e3129804ac382ae)
 
-[Map Embed](https://github.com/NoahJ214/Team-Screwdrivers/commit/98b9dc6133dda78cbb2ed70c58ceac2faa6babd0)
-
-[Deployed Website](trailnorteservices.tk)
-
-[Individual Github Pages](https://isaac-le.github.io/Tri3Repo/)
-
-[Individual Review Tickets](https://isaac-le.github.io/Tri3Repo/reviewticket)
-
-Self Grade Assessment: 2.5/2.5 - I updated the material wishlist while also adding the database to the wishilist so that the wishilist works and can be seen for everyone. I also worked on the map embed so that you can see and access different trails in our area. I also deployed the website which is shown above.
  
-Team Grade Assessment: 2.5/2.5 - We worked really well together and often collaborated to fix and work on different issues and tasks that we have been handed. We inserted and had many different databases metting the database requirment, and even though deployment took a bit we were able to figure it out in the end and get the running website ready for the N@TM.
