@@ -9,6 +9,8 @@ from flask_login import login_required
 from __init__ import app, login_manager
 from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
+from cruddy.app_notes import app_notes
+
 
 from cruddy.login import login, logout, authorize
 
@@ -18,6 +20,7 @@ from wtforms.validators import DataRequired, Email
 
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_crud)
+app.register_blueprint(app_notes)
 
 
 from __init__ import app
