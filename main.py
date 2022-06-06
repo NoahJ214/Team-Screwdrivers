@@ -14,10 +14,6 @@ from cruddy.app_notes import app_notes
 
 from cruddy.login import login, logout, authorize
 
-from flask_wtf import Form
-from wtforms import StringField, PasswordField
-from wtforms.validators import DataRequired, Email
-
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_notes)
@@ -110,54 +106,6 @@ def map():
 def contact():
     return render_template("contact.html")
 
-#class EmailForm(Form):
-    email = TextField('Email', validators=[DataRequired(), Email()])
-
-class PasswordForm(Form):
-    password = PasswordField('Email', validators=[DataRequired()])
-
-
-@app.route('/reset/', methods=["GET", "POST"])
-def reset():
-    #form = EmailForm()
-    #if form.validate_on_sumbit():
-    #    user = User.query.filter_by(email=form.email.data).first_or_404()
-
-        subject = "Password reset requested"
-
-        recover_url = url_for(
-            'reset_with_token',
-        #    token=token,
-            _external=True)
-
-        html = render_template(
-            'email/recover.html',
-            recover_url=recover_url)
-
-        #send_email(user.email, subject, html)
-
-        return redirect(url_for('index'))
-    #return render_template("reset.html", form=form)
-
-@app.route('/reset/<token>', methods=["GET", "POST"])
-def reset_with_token(token):
-   # try:
- #email = ts.loads(token, salt="recover-key", max_age=86400)
-  # except:
-#    abort(404)
-
-    form = PasswordForm()
-
-    if form.validate_on_submit():
-    #    user = User.query.filter_by(email=email).first_or_404()
-
-    #    user.password = form.password.data
-
-    #    db.session.add(user)
-#        db.session.commit()
-
-        return redirect(url_for('main_login'))
-    return render_template('reset_with_token.html', form=form, token=token)
 
 # runs the application on the development server
 if __name__ == "__main__":
